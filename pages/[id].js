@@ -3,9 +3,9 @@ import { usePost } from '../hooks/hooks';
 import Link from 'next/link'
 
 export default function Post({ id }) {
-  const { data: post, error, loading } = usePost(id);
+  const { data: post, error, isLoading } = usePost(id);
 
-  if (loading) {
+  if (isLoading) {
     return <div>Loading..</div>;
   }
 

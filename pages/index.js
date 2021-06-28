@@ -4,9 +4,9 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 
 export default function Home() {
-  const { data, loading, error } = usePosts();
+  const { data, error, isLoading } = usePosts();
 
-  if (loading) {
+  if (isLoading) {
     return <div>Loading..</div>;
   }
 
@@ -18,7 +18,7 @@ export default function Home() {
     <Container>
       {data.map((post) => {
         return (
-          <Row key={post.id} style={{ margin: '20px' }}>
+          <Row key={post.id} style={{ margin: '20px auto' }}>
             <PostPreview post={post} />
           </Row>
         );
