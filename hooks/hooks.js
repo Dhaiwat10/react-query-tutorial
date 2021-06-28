@@ -15,7 +15,7 @@ const usePost = (id) => {
     return fetch(`${baseUrl}/posts/${id}`).then((r) => r.json());
   };
 
-  return useQuery(['posts', id], fetchData);
+  return useQuery(['post', id], fetchData);
 };
 
 export { usePosts, usePost };
