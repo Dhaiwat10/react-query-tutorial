@@ -1,6 +1,6 @@
 import { PostPreview } from '../components';
 import { usePosts } from '../hooks/hooks';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 
 export default function Home() {
