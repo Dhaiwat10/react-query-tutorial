@@ -4,9 +4,9 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 
 export default function Home() {
-  const { data, loading, error } = usePosts();
+  const { data, isLoading, error } = usePosts();
 
-  if (loading) {
+  if (isLoading) {
     return <div>Loading..</div>;
   }
 

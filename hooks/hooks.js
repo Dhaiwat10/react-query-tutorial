@@ -4,7 +4,7 @@ const baseUrl = 'https://jsonplaceholder.typicode.com';
 
 const usePosts = () => {
   const [data, setData] = useState();
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -27,12 +27,12 @@ const usePosts = () => {
     fetchData();
   }, []);
 
-  return { data, loading, error };
+  return { data, isLoading, error };
 };
 
 const usePost = (id) => {
   const [data, setData] = useState();
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const usePost = (id) => {
     fetchData();
   }, [id]);
 
-  return { data, loading, error };
+  return { data, isLoading, error };
 };
 
 export { usePosts, usePost };
